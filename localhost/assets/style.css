@@ -1,0 +1,443 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Добавлено для учета границ и отступов в общей ширине элемента */
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: white;
+    max-width: 1700px;
+    padding: 0 10%; /* Добавлено для отступов справа и слева */
+}
+
+li {
+    list-style-type: none;
+}
+
+hr {
+    border: none; /* Убираем стандартную границу */
+    height: 0.5px; /* Задаем высоту линии */
+    background-color: black; /* Цвет линии */
+    width: 100%; /* Ширина линии */
+    margin-top: -28px;
+    margin-bottom: 15px;
+}
+
+.navbar_view {
+    display: none;
+
+    margin-bottom: 10px; /* Добавляем отступ между элементами */
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar1 {
+    flex-direction: column; /* Располагаем элементы списка вертикально */
+}
+
+.header {
+    margin-top: 25px;   
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex: 1;
+}
+
+.logotype {
+    width: 100px;
+    height: 60px;
+    overflow: hidden;
+}
+
+.logotype img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.avatar-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.avatar-container a {
+    margin-left: 20px;
+    margin-top: 25px;
+}
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dropdown {
+    margin-top: 5px;
+    position: absolute;
+    top: 80%;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 1;
+}
+
+.dropdown a {
+    display: block;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    color: #333;
+}
+
+.avatar-container:hover .dropdown {
+    display: block;
+}
+
+.left {
+    flex: 1; /* Занимает доступное пространство внутри flex-контейнера */
+    display: flex;
+    flex-direction: row; /* Располагаем элементы в строку */
+    justify-content: flex-start; /* Выравнивание контента по левой границе */
+    align-items: flex-start; /* Выравнивание контента по верхней границе */
+}
+
+.top-margin {
+    margin-top: 25px;
+}
+
+.navbar_view a {
+    margin-bottom: 10px; /* Добавляем отступ между элементами */
+}
+
+.right {
+    flex: 1; /* Занимает доступное пространство внутри flex-контейнера */
+    display: flex;
+    flex-direction: row; /* Располагаем элементы в строку */
+    justify-content: flex-end; /* Выравнивание контента по правой границе */
+    align-items: flex-start; /* Выравнивание контента по верхней границе */ 
+}
+
+.right a {
+    margin-right: 10px;
+    margin-top: 25px;
+}
+
+.main {
+    display: block;
+    padding: 2%;
+}
+
+.main h4, h2 {
+margin-top: 10px;
+margin-bottom: 10px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #648CFB;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+textarea,
+input[type="text"],
+input[type="email"],
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: #648CFB;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4266D6;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+
+
+
+table.services-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+table.services-table th,
+table.services-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+table.services-table th {
+    background-color: #648CFB;
+    color: #fff;
+}
+table.services-table td {
+    background-color: #f2f2f2;
+}
+
+.inpService section {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.inpService h2 {
+    color: #648CFB;
+}
+.inpService p {
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+.btn {
+    background-color: #648CFB;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: #4568A4;
+}
+
+.services-list img {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.iconMess {
+margin-top: -15px;
+margin-right: 20px;
+}
+
+
+
+.portfolio-item {
+    margin-bottom: 30px;
+    border: 1px solid #648CFB;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(100, 140, 251, 0.3);
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.portfolio-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #648CFB;
+}
+
+.portfolio-item p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.portfolio-item a {
+    color: #648CFB;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.portfolio-item img {
+    max-width: 100px;
+    height: auto; 
+    border-radius: 5px;
+    border: 1px solid #648CFB;
+    float: left;
+    margin-right: 20px;
+}
+
+
+
+
+
+.services-container {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between; /* Равномерно распределяем элементы по контейнеру */
+margin: 0 -10px; /* Убираем отступы по бокам */
+}
+
+.service {
+width: calc(50% - 20px);
+margin: 0 10px 20px;
+padding: 10px;
+box-sizing: border-box;
+display: flex;
+}
+
+.service img {
+max-width: 100px;
+height: auto;
+border-radius: 5px;
+margin-right: 10px;
+}
+
+.service-text {
+flex-grow: 1;
+}
+
+.service p {
+font-size: 16px;
+color: #333;
+line-height: 1.5;
+}
+
+
+
+
+
+
+footer {
+    margin-top: 100px;
+    padding: 20px 5%;
+    bottom: 0;
+    align-items: flex-end;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.social-links img {
+    border-radius: 30%;
+    width: 35px;
+    height: 35px;
+}
+
+.footer-content span,
+.footer-content a,
+.social-links {
+    display: inline;
+    margin: 0 10px;
+    vertical-align: middle;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+a:hover {
+    color: #666;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Медиа запросы */
+
+
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+
+    .navbar {
+        display: none;
+    }
+    
+    .navbar1 {
+        display: none;
+    }
+
+    .navbar_view {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .navbar_view a {
+        margin-bottom: 10px;
+    }
+}
+
